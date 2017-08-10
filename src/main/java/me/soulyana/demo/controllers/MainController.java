@@ -58,7 +58,7 @@ public class MainController {
     @GetMapping("/searchFood")
     public String loadSearchFoodPage()
     {
-
+        return "searchFood";
     }
 
 
