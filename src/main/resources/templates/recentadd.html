@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
-
 <head>
 
     <meta charset="utf-8">
@@ -52,7 +51,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="listall.html">List all</a>
+                    <a href="add.html.html">Add a new Entry</a>
                 </li>
                 <li>
                     <a href="searchname.html">Search by Name</a>
@@ -70,68 +69,47 @@
     <!-- /.container -->
 </nav>
 
-<div class="row">
-    <div class="box">
-        <div class="col-lg-12">
-            <hr>
-            <h2 class="intro-text text-center">Adding
-                <strong>form</strong>
-            </h2>
-            <hr>
-            <p>Whatever we want to put in here as General Intrucction!</p>
-            <form role="form"th:action="@{/add}" th:object="${potObject}" method="post">
-                <div class="row">
-                    <div class="form-group col-lg-4">
-                        <label>Chef First Name</label>
-                        <input th:field="*{firstname}" name="first_name" placeholder="Enter your First Name" class="form-control" type="text">
-                        <span th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}"></span><br />
-                    </div>
-                    <div class="form-group col-lg-4">
-                        <label>Last Name</label>
-                        <input th:field="*{lastname}" name="last_name" placeholder="Enter your last name" class="form-control" type="text">
-                        <span th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"></span><br />
-                    </div>
-                    <div class="form-group col-lg-4">
-                        <label>Food</label>
-                        <input th:field="*{lastname}" name="last_name" placeholder="Enter your food" class="form-control" type="text">
-                        <span th:if="${#fields.hasErrors('food')}" th:errors="*{food}"></span><br />
-                    </div>
+<div class="container">
 
-                    <div class="clearfix"></div>
-                    <div class="form-group col-lg-12">
-                        <label>Description of the food.</label>
-                        <textarea th:field="*{description}" name="description" placeholder="Enter a description" class="form-control" rows="6"></textarea>
-                        <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span><br />
-                    </div>
-                    <div class="form-group col-lg-12">
-                        <input type="hidden" name="save" value="contact">
-                        <button type="submit" class="btn btn-default">Add</button>
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Your
+                    <strong>Most recent Enter.</strong>
+                </h2>
+                <hr>
+            </div>
+            <div class="col-lg-12 text-center">
+
+                <h2>Food Name.
+                    <br>
+                    <small>Chef last name + First name</small>
+                </h2>
+                <p>Descripction</p>
+                <a href="#" class="btn btn-default btn-lg">Read More</a>
+                <hr>
+            </div>
+
+        </div>
+
+        <<!-- /.container -->
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p>Copyright &copy; Group#2 Java BootCamp 2017</p>
                     </div>
                 </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-</div>
-
-<!-- /.container -->
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <p>Copyright &copy; Group#2 Java BootCamp 2017</p>
             </div>
-        </div>
-    </div>
-</footer>
+        </footer>
 
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
 
 </body>
 
