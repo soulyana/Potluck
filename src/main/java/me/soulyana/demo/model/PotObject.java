@@ -15,8 +15,8 @@ public class PotObject {
     private long id;
 
     @NotNull
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
     @NotNull
     private String food;
     private String description;
@@ -26,20 +26,20 @@ public class PotObject {
     }
 
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getFood() {
