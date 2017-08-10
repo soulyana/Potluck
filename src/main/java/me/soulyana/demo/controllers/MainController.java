@@ -1,7 +1,7 @@
 package me.soulyana.demo.controllers;
 
 import me.soulyana.demo.model.PotObject;
-import me.soulyana.demo.potluckdepository.PotObjectRepository;
+import me.soulyana.demo.repository.PotObjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -44,8 +44,8 @@ public class MainController {
     @GetMapping("/listAll")
     public String loadListAllPage(Model model)
     {
-        Iterable<PotObject> potObject = potObjectRepository.findAll();
-        model.addAttribute("listOfPotObjects", potObject);
+        Iterable<PotObject> potObjectList = potObjectRepository.findAll();
+        model.addAttribute("listOfPotObjects", potObjectList);
         return "listAll";
     }
 
