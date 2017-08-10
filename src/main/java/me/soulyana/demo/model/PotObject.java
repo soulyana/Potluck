@@ -2,10 +2,12 @@ package me.soulyana.demo.model;
 
 import org.springframework.data.annotation.Id;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.validation.constraints.NotNull;
 
+@Entity
 public class PotObject {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
