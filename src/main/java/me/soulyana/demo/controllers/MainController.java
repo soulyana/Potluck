@@ -1,5 +1,6 @@
 package me.soulyana.demo.controllers;
 
+
 import me.soulyana.demo.model.PotObject;
 import me.soulyana.demo.repository.PotObjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,7 @@ import javax.validation.Valid;
 public class MainController {
 
     @Autowired
-    PotObjectRepository potObjectRepository;
-
+    private PotObjectRepository potObjectRepository;
 
     @RequestMapping("/")
     public String welcomePage()
