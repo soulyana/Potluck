@@ -1,17 +1,19 @@
 package me.soulyana.demo.model;
 
-import org.springframework.data.annotation.Id;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
 public class PotObject {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    private Long id;
+    private long id;
+
     @NotNull
     private String firstName;
     private String lastName;
@@ -19,14 +21,9 @@ public class PotObject {
     private String food;
     private String description;
 
-    public String getDescription() {
-        return description;
+    public long getId() {
+        return id;
     }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
 
 
     public String getFirstName() {
@@ -53,11 +50,11 @@ public class PotObject {
         this.food = food;
     }
 
-    public Long getId() {
-        return id;
+    public String getDescription() {
+        return description;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
